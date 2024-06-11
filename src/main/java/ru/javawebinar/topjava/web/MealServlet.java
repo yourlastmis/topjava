@@ -18,7 +18,6 @@ import java.util.List;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class MealServlet extends HttpServlet {
-    private static final Logger log = getLogger(MealServlet.class);
     private static final int CALORIES_PER_DAY_THRESHOLD = 2000;
     private static final String CREATE_OR_EDIT = "/meal.jsp";
     private static final String LIST = "/meals.jsp";
@@ -77,7 +76,7 @@ public class MealServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
 //        super.doDelete(req, resp);
         Long idToDelete = Long.parseLong(req.getParameter("id")) ;
         meals.delete(idToDelete);
