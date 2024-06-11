@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="cr"%>
 
 <html lang="ru">
@@ -19,19 +19,19 @@
     <input type="hidden" name="id" value="<cr:out value="${meal.id}" />" />
     <table>
         <tr>
-            <td>DateTime:</td>
+            <td><label>Enter DateTime:</label></td>
             <td>
-                <input type="datetime-local" name="dateTime" value="<cr:out value="${meal.dateTime}" />" />
+               <input type="datetime-local" name="dateTime" value="<cr:out value="${meal.dateTime}" />" />
             </td>
         </tr>
         <tr>
-            <td>Description:</td>
+            <td><label>Enter Description:</label></td>
             <td>
                 <input type="text" name="description" value="<cr:out value="${meal.description}" />" />
             </td>
         </tr>
         <tr>
-            <td>Calories:</td>
+            <td><label>Enter Calories:</label></td>
             <td>
                 <input type="text" name="calories" value="<cr:out value="${meal.calories}" />" />
             </td>
