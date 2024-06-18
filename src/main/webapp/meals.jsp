@@ -23,7 +23,7 @@
     <h2>Meals</h2>
     <a href="meals?action=create">Add Meal</a>
     <br><br>
-    <table border="1" cellpadding="8" cellspacing="0">
+    <table>
         <thead>
         <tr>
             <th>Date</th>
