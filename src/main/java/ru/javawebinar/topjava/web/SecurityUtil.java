@@ -6,7 +6,7 @@ import static ru.javawebinar.topjava.util.MealsUtil.DEFAULT_CALORIES_PER_DAY;
 
 public class SecurityUtil {
 
-    private static UserType currentUser = UserType.USER;
+    private static final UserType currentUser = UserType.USER;
 
     public static int authUserId() {
         return currentUser.getId();
