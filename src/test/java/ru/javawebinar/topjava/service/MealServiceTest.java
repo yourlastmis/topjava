@@ -26,7 +26,6 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 })
 @RunWith(SpringRunner.class)
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
-@Ignore
 public class MealServiceTest {
 
     @Autowired
@@ -95,6 +94,7 @@ public class MealServiceTest {
 
     @Test
     public void getAll() {
+
         MEAL_MATCHER.assertMatch(service.getAll(USER_ID), meals);
     }
 
