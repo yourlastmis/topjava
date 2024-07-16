@@ -1,6 +1,8 @@
 package ru.javawebinar.topjava;
 
-import java.util.List;
+
+
+import org.hibernate.mapping.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
