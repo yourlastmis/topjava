@@ -4,6 +4,8 @@ package ru.javawebinar.topjava;
 
 import org.hibernate.mapping.List;
 
+import java.util.Arrays;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -29,7 +31,8 @@ public class MatcherFactory {
 
         @SafeVarargs
         public final void assertMatch(Iterable<T> actual, T... expected) {
-            assertMatch(actual, List.of(expected));
+            assertMatch(actual, Arrays.asList(expected));
+//            assertMatch(actual, List.of(expected));
         }
 
         public void assertMatch(Iterable<T> actual, Iterable<T> expected) {

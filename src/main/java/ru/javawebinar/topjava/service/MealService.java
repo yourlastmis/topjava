@@ -1,16 +1,17 @@
 package ru.javawebinar.topjava.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
-import ru.javawebinar.topjava.model.Meal;
-import ru.javawebinar.topjava.repository.MealRepository;
+import ru.javawebinar.topjava.model.*;
+import ru.javawebinar.topjava.repository.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import static ru.javawebinar.topjava.util.DateTimeUtil.atStartOfDayOrMin;
-import static ru.javawebinar.topjava.util.DateTimeUtil.atStartOfNextDayOrMax;
+import static ru.javawebinar.topjava.util.DateTimeUtil.*;
 import static ru.javawebinar.topjava.util.ValidationUtil.checkNotFoundWithId;
 
 @Service
@@ -18,7 +19,8 @@ public class MealService {
 
     private final MealRepository repository;
 
-    public MealService(MealRepository repository) {
+    @Autowired
+    public MealService(@Qualifier("dataJpaMealRepository") MealRepository repository) {
         this.repository = repository;
     }
 
