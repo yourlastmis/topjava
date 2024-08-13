@@ -1,6 +1,5 @@
 package ru.javawebinar.topjava.web;
 
-import jakarta.annotation.PostConstruct;
 import org.junit.jupiter.api.Assumptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -15,6 +14,8 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import ru.javawebinar.topjava.ActiveDbProfileResolver;
 import ru.javawebinar.topjava.Profiles;
+
+import javax.annotation.PostConstruct;
 
 @SpringJUnitWebConfig(locations = {
         "classpath:spring/spring-app.xml",
